@@ -1,35 +1,40 @@
 {
   "kind": "Workflow",
-  "id": "44349b458c8fff5b621f51aea639daaf",
+  "id": "0a835848c8dfb205b9151ce2eee7b157",
   "isDeleted": false,
-  "rev": "65-77619ce4648a8c53cc68a386de7e8bf4",
+  "rev": "7-f2aacdb4965b3c807a59e2d8426ded37",
   "description": "4 Standard Operators for testing.",
   "name": "Standard Operator Test Workflow",
-  "createdBy": "Martin",
+  "createdBy": "fnaji",
   "acl": {
     "kind": "Acl",
-    "owner": "TestTeam",
+    "owner": "fnaji",
     "aces": []
   },
   "createdDate": {
     "kind": "Date",
-    "value": "2021-09-08T16:20:45.666927Z"
+    "value": "2022-04-12T15:21:19.071693Z"
   },
   "lastModifiedDate": {
     "kind": "Date",
-    "value": "2022-03-22T07:43:19.320125Z"
+    "value": "2022-04-12T15:23:05.491356Z"
   },
-  "urls": [],
+  "urls": [
+    {
+      "kind": "Url",
+      "uri": "https://github.com/tercen/std_test_workflow_template"
+    }
+  ],
   "tags": [],
   "meta": [],
   "url": {
     "kind": "Url",
-    "uri": ""
+    "uri": "https://github.com/tercen/std_test_workflow_template"
   },
-  "version": "",
+  "version": "1.0.0",
   "authors": [],
   "isPublic": false,
-  "projectId": "44349b458c8fff5b621f51aea639b6a7",
+  "projectId": "0a835848c8dfb205b9151ce2eee70785",
   "folderId": "",
   "links": [
     {
@@ -62,7 +67,7 @@
       "kind": "TableStep",
       "id": "faf8bb9c-6901-47fe-937b-39aba977db81",
       "groupId": "",
-      "name": "crabs-long",
+      "name": "crabs_long.csv",
       "inputs": [],
       "outputs": [
         {
@@ -76,13 +81,13 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 88.99000000000001,
+          "x": 106.56190490722656,
           "y": 55.0
         },
         "topLeft": {
           "kind": "Point",
           "x": 596.5050000000001,
-          "y": 24.5
+          "y": 23.5
         }
       },
       "state": {
@@ -96,7 +101,7 @@
         "kind": "TableStepModel",
         "relation": {
           "kind": "UnionRelation",
-          "id": "4297f631-4290-49f6-9952-29026f0008f0",
+          "id": "720c93d1-7f32-41a3-8299-109866c2c08b",
           "relations": []
         }
       }
@@ -126,7 +131,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 126.0635986328125,
+          "x": 126.0638427734375,
           "y": 55.0
         },
         "topLeft": {
@@ -282,7 +287,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 0
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -296,7 +301,7 @@
             "kind": "OperatorRef",
             "name": "Mean",
             "version": "0.12.1",
-            "operatorId": "44349b458c8fff5b621f51aea64a46ca",
+            "operatorId": "0a835848c8dfb205b9151ce2eee7159a",
             "operatorKind": "ROperator",
             "propertyValues": [],
             "url": {
@@ -334,13 +339,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 0
+          "nRows": 1
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "710aab7c-664e-4d48-b7a2-0bbd01571825"
+        "id": "5bb13e82-4a76-43e2-ae85-74b492539acb"
       }
     },
     {
@@ -368,7 +373,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 169.92543029785156,
+          "x": 169.92576599121094,
           "y": 55.0
         },
         "topLeft": {
@@ -524,7 +529,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 0
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -538,7 +543,7 @@
             "kind": "OperatorRef",
             "name": "simple docker operator",
             "version": "0.14.0",
-            "operatorId": "44349b458c8fff5b621f51aea64a5de8",
+            "operatorId": "0a835848c8dfb205b9151ce2eee72a83",
             "operatorKind": "DockerOperator",
             "propertyValues": [],
             "url": {
@@ -576,13 +581,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 0
+          "nRows": 1
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "a2053ee0-28b8-42fc-9936-3cf36ea4e854"
+        "id": "5aedcce3-82a5-464b-91e5-80693a85ee80"
       }
     },
     {
@@ -610,7 +615,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 161.595458984375,
+          "x": 161.59579467773438,
           "y": 55.0
         },
         "topLeft": {
@@ -780,7 +785,7 @@
             "kind": "OperatorRef",
             "name": "Shiny Mean",
             "version": "0.11.0",
-            "operatorId": "44349b458c8fff5b621f51aea63add3d",
+            "operatorId": "2288dd7fd84029a249a58e725664b998",
             "operatorKind": "ShinyOperator",
             "propertyValues": [],
             "url": {
@@ -824,7 +829,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "2bee7a1f-088b-4f44-b5dc-5ae3d42f0638"
+        "id": "b5079ce8-ada3-419e-9ae0-fd218dbe2cb1"
       }
     },
     {
@@ -852,7 +857,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 205.45729064941406,
+          "x": 205.4577178955078,
           "y": 55.0
         },
         "topLeft": {
@@ -1022,7 +1027,7 @@
             "kind": "OperatorRef",
             "name": "Docker Shiny Mean",
             "version": "0.11.0-1",
-            "operatorId": "44349b458c8fff5b621f51aea64a751d",
+            "operatorId": "0a835848c8dfb205b9151ce2eee73378",
             "operatorKind": "DockerWebAppOperator",
             "propertyValues": [],
             "url": {
@@ -1066,13 +1071,13 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "20f43d18-2384-49ed-8fdd-22be9d6cffa3"
+        "id": "cb5561c5-fa02-4ed2-8f44-89e87a82d7d5"
       }
     }
   ],
   "offset": {
     "kind": "Point",
-    "x": -163.0,
+    "x": -162.0,
     "y": 25.0
   }
 }
