@@ -1,23 +1,23 @@
 {
   "kind": "Workflow",
-  "id": "0a835848c8dfb205b9151ce2eee7b157",
+  "id": "ccedb11eaa3f4fbd03e3d2b5cc824830",
   "isDeleted": false,
-  "rev": "7-f2aacdb4965b3c807a59e2d8426ded37",
+  "rev": "6-35d10f973dd54ab3887f79b538799c2e",
   "description": "4 Standard Operators for testing.",
   "name": "Standard Operator Test Workflow",
-  "createdBy": "fnaji",
+  "createdBy": "alex",
   "acl": {
     "kind": "Acl",
-    "owner": "fnaji",
+    "owner": "Stormcrow-01",
     "aces": []
   },
   "createdDate": {
     "kind": "Date",
-    "value": "2022-04-12T15:21:19.071693Z"
+    "value": "2022-04-21T09:05:30.989381Z"
   },
   "lastModifiedDate": {
     "kind": "Date",
-    "value": "2022-04-12T15:23:05.491356Z"
+    "value": "2022-04-21T12:02:47.148005Z"
   },
   "urls": [
     {
@@ -31,10 +31,10 @@
     "kind": "Url",
     "uri": "https://github.com/tercen/std_test_workflow_template"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [],
   "isPublic": false,
-  "projectId": "0a835848c8dfb205b9151ce2eee70785",
+  "projectId": "ccedb11eaa3f4fbd03e3d2b5cc7b868e",
   "folderId": "",
   "links": [
     {
@@ -67,7 +67,7 @@
       "kind": "TableStep",
       "id": "faf8bb9c-6901-47fe-937b-39aba977db81",
       "groupId": "",
-      "name": "crabs_long.csv",
+      "name": "crabs-long.csv",
       "inputs": [],
       "outputs": [
         {
@@ -81,28 +81,52 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 106.56190490722656,
+          "x": 104.05569458007812,
           "y": 55.0
         },
         "topLeft": {
           "kind": "Point",
-          "x": 596.5050000000001,
-          "y": 23.5
+          "x": 593.5050000000001,
+          "y": 7.5
         }
       },
       "state": {
         "kind": "StepState",
         "taskId": "",
         "taskState": {
-          "kind": "InitState"
+          "kind": "DoneState"
         }
       },
       "model": {
         "kind": "TableStepModel",
         "relation": {
-          "kind": "UnionRelation",
-          "id": "720c93d1-7f32-41a3-8299-109866c2c08b",
-          "relations": []
+          "kind": "RenameRelation",
+          "id": "rename_ccedb11eaa3f4fbd03e3d2b5cc7bf5b7",
+          "relation": {
+            "kind": "SimpleRelation",
+            "id": "ccedb11eaa3f4fbd03e3d2b5cc7bf5b7",
+            "index": 0
+          },
+          "inNames": [
+            "sp",
+            "sex",
+            "index",
+            "observation",
+            "variable",
+            "measurement",
+            "ccedb11eaa3f4fbd03e3d2b5cc7bf5b7._rids",
+            "ccedb11eaa3f4fbd03e3d2b5cc7bf5b7.tlbId"
+          ],
+          "outNames": [
+            "sp",
+            "sex",
+            "index",
+            "observation",
+            "variable",
+            "measurement",
+            "rowId",
+            "tableId"
+          ]
         }
       }
     },
@@ -131,7 +155,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 126.0638427734375,
+          "x": 126.0635986328125,
           "y": 55.0
         },
         "topLeft": {
@@ -291,8 +315,27 @@
         },
         "filters": {
           "kind": "Filters",
-          "removeNaN": true,
-          "namedFilters": []
+          "removeNaN": false,
+          "namedFilters": [
+            {
+              "kind": "NamedFilter",
+              "logical": "and",
+              "not": false,
+              "filterExprs": [
+                {
+                  "kind": "FilterExpr",
+                  "filterOp": "greater",
+                  "stringValue": "-1000000",
+                  "factor": {
+                    "kind": "Factor",
+                    "name": "measurement",
+                    "type": "double"
+                  }
+                }
+              ],
+              "name": "measurement"
+            }
+          ]
         },
         "operatorSettings": {
           "kind": "OperatorSettings",
@@ -300,8 +343,8 @@
           "operatorRef": {
             "kind": "OperatorRef",
             "name": "Mean",
-            "version": "0.12.1",
-            "operatorId": "0a835848c8dfb205b9151ce2eee7159a",
+            "version": "1.1.0",
+            "operatorId": "ccedb11eaa3f4fbd03e3d2b5cc885536",
             "operatorKind": "ROperator",
             "propertyValues": [],
             "url": {
@@ -345,7 +388,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "5bb13e82-4a76-43e2-ae85-74b492539acb"
+        "id": "27f79bd5-3956-4cd8-932a-b0e466070b66"
       }
     },
     {
@@ -373,12 +416,12 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 169.92576599121094,
+          "x": 169.92543029785156,
           "y": 55.0
         },
         "topLeft": {
           "kind": "Point",
-          "x": 416.505,
+          "x": 417.505,
           "y": 135.5
         }
       },
@@ -543,7 +586,7 @@
             "kind": "OperatorRef",
             "name": "simple docker operator",
             "version": "0.14.0",
-            "operatorId": "0a835848c8dfb205b9151ce2eee72a83",
+            "operatorId": "ccedb11eaa3f4fbd03e3d2b5cc817bc8",
             "operatorKind": "DockerOperator",
             "propertyValues": [],
             "url": {
@@ -587,7 +630,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "5aedcce3-82a5-464b-91e5-80693a85ee80"
+        "id": "36df2cf0-11b2-43d0-a75c-a63ce4217685"
       }
     },
     {
@@ -615,7 +658,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 161.59579467773438,
+          "x": 161.595458984375,
           "y": 55.0
         },
         "topLeft": {
@@ -785,7 +828,7 @@
             "kind": "OperatorRef",
             "name": "Shiny Mean",
             "version": "0.11.0",
-            "operatorId": "2288dd7fd84029a249a58e725664b998",
+            "operatorId": "ccedb11eaa3f4fbd03e3d2b5cc818d82",
             "operatorKind": "ShinyOperator",
             "propertyValues": [],
             "url": {
@@ -829,7 +872,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "b5079ce8-ada3-419e-9ae0-fd218dbe2cb1"
+        "id": "f17b2253-264f-4d3e-b937-b53faad96c34"
       }
     },
     {
@@ -857,7 +900,7 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 205.4577178955078,
+          "x": 205.45729064941406,
           "y": 55.0
         },
         "topLeft": {
@@ -1027,7 +1070,7 @@
             "kind": "OperatorRef",
             "name": "Docker Shiny Mean",
             "version": "0.11.0-1",
-            "operatorId": "0a835848c8dfb205b9151ce2eee73378",
+            "operatorId": "ccedb11eaa3f4fbd03e3d2b5cc81a1c8",
             "operatorKind": "DockerWebAppOperator",
             "propertyValues": [],
             "url": {
@@ -1071,7 +1114,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "cb5561c5-fa02-4ed2-8f44-89e87a82d7d5"
+        "id": "47469821-54e5-4a03-9668-f57e09115a99"
       }
     }
   ],
